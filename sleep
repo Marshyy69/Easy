@@ -1,30 +1,28 @@
-//broken code
-
 const getSleepHours = day => {
 
 switch(day){
   case 'monday':
-  return 8
+  return 6
   break;
 
   case 'tuesday':
-  return 8
+  return 6
   break;
 
   case 'wednesday':
-  return 7
+  return 6
   break;
 
   case 'thursday':
-  return 8
+  return 6
   break;
 
   case 'friday':
-  return 5
+  return 6
   break;
 
   case 'saturday':
-  return 8
+  return 6
   break;
 
   case 'sunday':
@@ -47,22 +45,18 @@ const getIdealSleepHours = () => {
 
 const calculateSleepDebt = () => {
   const actualSleepHours = getActualSleepHours();
-  const IdealSleepHours = getIdealSleepHours();
+  const idealSleepHours = getIdealSleepHours();
 
   if (actualSleepHours === idealSleepHours){
   console.log('wow u got the amount of sleep!');
 }
 
- else if ( actualSleeperHours > idealSleepHours){
+ else if ( actualSleepHours > idealSleepHours){
   console.log('u got more sleep than needed!');
 }
- else if(actualSleeperHours < idealSleepHours) {
+ else if(actualSleepHours < idealSleepHours) {
   console.log('boii u better get some rest before i whoop ur ass. you need ' + (idealSleepHours - actualSleepHours) + ' hours more!' );
 }
 };
 
 console.log(calculateSleepDebt());
-
-
-
-
